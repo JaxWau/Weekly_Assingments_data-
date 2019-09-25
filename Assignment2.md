@@ -1,7 +1,7 @@
 Here is the information for Weekly Assingment 2
 
 Code for finiding the number of protein sequences in the .fasta file.-----> **fgrep NC_008535 Assignment_2_Coffee_Sequence.fasta | wc -l > Names_o_Proteins.txt**
-This line of code will all lines with "NC_008535" from the file and then count the number of lines there are, which should be the number of proteins in the file, and put it into a new file. That number is 85. *(It is good to note that it does say that there are 86 proteins but I was unable to figure out any number that differed from 85 even wehn manually counting them)*
+This line of code will all lines with "NC_008535" from the file and then count the number of lines there are, which should be the number of proteins in the file, and put it into a new file. That number is 86. *(I'm wondering if there was an error in downloading my file as after manually counting I only counted 85 proteins. However I found that my .fasta file had deleeted protein number 70 and the file skipped from 69-71 hence why the answer should be 86 proteins.)*
 
 Code for making a new file for all the names of the protein sequences in the .fasta file --> **grep from Assignment_2_Coffee_Sequence.fasta | sed 's/from//g' | sed 's/NC_008535//g' | sed's/>CoarCp//g' | sort -n > Protein_Name_Data.txt**
 This line of code finds all lines containing "from" from the file and then deletes "from", "NC_008535", and ">CoarCP" from those lines to give you the number and name of the protein. I then added the sort command to sort the file numerically before putting that data into a new file. 
