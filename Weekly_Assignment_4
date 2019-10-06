@@ -1,0 +1,6 @@
+Here are the answers for the questions for Weekly Asignment 4. 
+1. The reads were of good quality with no trimming needed to be done. 
+2. After using cutaput the adaptors were trimmed a total of 5381 times for the foreward read R1 and 5358 times for the secord read R2. 
+96.26% of the genome mapped to the reference genome while 3.74% did not align to the reference genome.
+Here are the commands used for the mapping process:
+bowtie2 -x C.hydro -1 C.hydro_6008_R1.fastq -2 C.hydro_6008_R2.fastq -S 6008.sam. This is also the same code that we used in class for this bacterium. 
