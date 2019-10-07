@@ -1,6 +1,17 @@
 Here are the answers for the questions for Weekly Asignment 4. 
-1. The reads were of good quality with no trimming needed to be done. 
-2. After using cutaput the adaptors were trimmed a total of 5381 times for the foreward read R1 and 5358 times for the secord read R2. 
-96.26% of the genome mapped to the reference genome while 3.74% did not align to the reference genome.
+1. The reads were of good quality and trimming was done to ensure top quality of reads. This is the code used: cutadapt -q 20,20 -a CTGTCTCTTATACACATCTCCGAGCCCACGAGAC -A CTGTCTCTTATACACATCTGACGCTGCCGACGA -m 50 --max-n 0 -o C.HydorF_R1.cutadapt.fastq -p C.HydorF_R2.cutadapt.fastq C.HydorF_R1.fastq C.HydorF_R2.fastq
+
+2. After using cutaput the adaptors were trimmed 18001 times for read 1 (R1) and 14855 times for read 2 (R2).
 Here are the commands used for the mapping process:
-bowtie2 -x C.hydro -1 C.hydro_6008_R1.fastq -2 C.hydro_6008_R2.fastq -S 6008.sam. This is also the same code that we used in class for this bacterium. 
+bowtie2 -x C.hydro -1 C.HydorF_R1.cutadapt.fastq -2 C.HydorF_R2.cutadapt.fastq -S HydroF.sam
+76.54% of the reads matched the reference genome while 23.46% of the reads did not match to the reference genome. 
+
+
+
+The below code was where I got before you're email. If it is ok, I will still go through with the Canvas assignment becuase I found the separation of SNPs intriguing. 
+**To get varients from these reads HydroF.sam was first turned into a different file called HydoF.bam using the following code:
+samtools view -b HydroF.sam | samtools sort - > C.Hydrof.bam
+This new .bam file was then indexed using samtools index C.HydroF.bam
+The varients within the C.HydroF.bam file were then called using the following code:
+bcftools mpileup C.hydrogenoformans_Z2901.fasta C.HydroF.bam | bcftools call -mv -Ob --ploidy 1 -o raw.callsF.bcf**
+
