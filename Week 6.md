@@ -15,6 +15,6 @@ The blastable database was then queried with the following code:
 
 blastp -db Unk_therm.faa -query HSP_prot.fasta -out CPN_BLAST.txt -outfmt 7
 
-1 and 2. After running the blastp there were 6 quieres. Within each of these 6, x of them were HSPs. The reason for this being that the %identity was high relative to the others, the e.value was very low, and the length of the reads was long. 
+1 and 2. After running the blastp there were 6 quieres. Within each of these 6 quieries there we many HSPs. Winith these HSPs, 6 of them were actual HSPs. The reason for this being that firstly their E-value was very low and that on the graph we were shown in class their %identity and overall length fell within the "safe zone". 
 
 Of these HSPs y of them have paralogs. The reason for this is....
