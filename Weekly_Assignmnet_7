@@ -14,9 +14,13 @@ The researchers tested RNA-Seq data for genes in schizophrenia so that they coul
 and expression of specific gene networks for patients with schizophrenia. 
 
 Experimental Design for RNA-Seq portion:
-
+RNA-Seq librarys were generated using Illumina TruSeq RNA sample prep kit and then the design followed the same pipeline. 
 
 Pipline for RNA-Seq analysis:
+Library Generation -> Genomic Short-read Nucleotide Alignment Program to map reads to reference human genome (hg19) -> SNPs recorded and
+.sam files converted to .bam files -> SAMtools pipeline used to get rid of duplications -> NCBI RefSeq for gene annotation ->Cuffdiff, edgeR,
+and DEseq2 used with default parameters for gene differental expression. 
+
 
 Statistical?Quatitiative analysis for the data:
 Used FPKM to normalize the data and then obtained P-values, Q-values, and Log2(FC) from them using three different statistical programs
