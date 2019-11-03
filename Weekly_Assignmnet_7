@@ -4,11 +4,20 @@ Paper: RNA-seq analysis of amygdala tissue reveals characteristic expression pro
 Link to Paper: https://www.nature.com/articles/tp2017154
 
 Summary of Main findings:
+After using RNA-Seq to investigate the gene expression in schizophenic patients the researchers found quite a few upregulated,
+569 genes, and downregulated, 192 genes. Those that were upregulated were stated to have been affected "immune responses" and 
+"blood vessel developmet" whereas those that were downregulated were involed in pathways like "behavior" and "synaptic transimission".
+
 
 Hypothesis they tested:
+The researchers tested RNA-Seq data for genes in schizophrenia so that they could see if therapudic approaches that target the function
+and expression of specific gene networks for patients with schizophrenia. 
 
 Experimental Design for RNA-Seq portion:
+
 
 Pipline for RNA-Seq analysis:
 
 Statistical?Quatitiative analysis for the data:
+Used FPKM to normalize the data and then obtained P-values, Q-values, and Log2(FC) from them using three different statistical programs
+cutdif, edgeR, and DEseq2. 
