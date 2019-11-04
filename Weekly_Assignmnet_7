@@ -11,10 +11,14 @@ After using RNA-Seq to investigate the gene expression in schizophenic patients 
 
 Hypothesis they tested:
 The researchers tested RNA-Seq data for genes in schizophrenia so that they could see if therapudic approaches that target the function
-and expression of specific gene networks for patients with schizophrenia. 
+and expression of specific gene networks for patients with schizophrenia would be ideal and be of use.
 
 Experimental Design for RNA-Seq portion:
-RNA-Seq librarys were generated using Illumina TruSeq RNA sample prep kit and then the design followed the same pipeline. 
+RNA-Seq librarys were generated using Illumina TruSeq RNA sample prep kit and then the design followed the same design of the RNA-Seq pipline
+detailed below. Essentially the reesearchers first generated an RNA-Seq library from their genomic data in order to allow them to look at
+and compare their data with a human reference later. They then compared their data with a reference human genome by mapping reads in order
+to get genomic data that they could use to see up and down-regulation of genes. The SNPs were then recorded and converted to a .bam file 
+to make it easier to read. 
 
 Pipline for RNA-Seq analysis:
 Library Generation -> Genomic Short-read Nucleotide Alignment Program to map reads to reference human genome (hg19) -> SNPs recorded and
