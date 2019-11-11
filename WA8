@@ -1,3 +1,11 @@
 Information regarding Weekly Assignment 8
 
-.csv files were downloaded from the links provided however first R and R-studio needed to be downloaded. Could also do on campus?
+.csv files were downloaded from the links provided and then moved into the DE direcotry under the directory called "Data".
+Code was used as dine in class for doing analysis on the files. 
+
+Answeres for questions:
+1. There were a total of 34675 genes that were tested and differentially expressed. 
+2. There were 1489 genes that were differentially expressed in the Control compared to the mutant.
+3. There were 915 genes that were differentially expressed in the mutant compared to the control. 
+4. Gene Solyc03g098720.2.1 was the most differentially expressed in the Mutant compared to the control.
+5. Gene Solyc07g053460.2.1	was the most differenally expressed in the Control when compared to the mutant. 
