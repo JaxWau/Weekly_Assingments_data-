@@ -1,0 +1,41 @@
+#Week 9 Assignment Information
+# Code for generation of Volcano plot with Control being 
+#blue and the mitant points being red.
+# - log2 means more expressed in control, + log2 = mutant
+
+#Add a column in results that tells us if the gene is a control or mutant. 
+W8res=mutate(W8res, ID=ifelse(log2FoldChange<0,"Control","Mutant"))
+
+#Make the volcano plot and make "Controls" blue and "Mutants" red. 
+ggplot(W8res)+
+  geom_point(aes(x=log2FoldChange, y=padj, color=ID))+
+  ggtitle("Control v Mutant")+
+  xlab("log 2 Fold Change")+
+  ylab("-log10 Padj")+
+  #scale_y_continuous(lmits = c(0,50))+
+  theme(legend.position = "none",
+        plot.title = element_text(size = rel(2), hjust = 0.5),
+        axis.title = element_text(size = rel(1.25)))+
+  theme_bw()
+
+#To make the box plot of gene with highest positive fold change
+
+plotCounts(dds, gene = "Solyc11g028040.1.1", intgroup = "dex", returnData = TRUE) %>%
+  ggplot(aes(dex,count))+
+  geom_boxplot(aes(fill=dex))+
+  scale_y_log10()+
+  ggtitle("Solyc11g028040.1.1")
+
+#Repreatve above bur for highest negative fold change
+plotCounts(dds, gene = "Solyc09g089500.2.1", intgroup = "dex", returnData = TRUE) %>%
+  ggplot(aes(dex,count))+
+  geom_boxplot(aes(fill=dex))+
+  scale_y_log10()+
+  ggtitle("Solyc09g089500.2.1")
+
+#Making an MA plot
+ggplot(W8res)+
+  + geom_point(aes(x=log10(baseMean), y= log2FoldChange, colour=ID))+
+  + ggtitle("MA Plot")+
+  + xlab("Log10 baseMean")+
+  + ylab("log2FoldChange")
