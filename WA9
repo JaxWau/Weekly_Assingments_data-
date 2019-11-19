@@ -10,7 +10,7 @@ W8res=mutate(W8res, ID=ifelse(log2FoldChange>0,"Mutant", "Control"))
 VP <- ggplot(W8res)+
   geom_point(aes(x=log2FoldChange, y=padj, color=ID))+
   ggtitle("Control v Mutant")+
-  xlab("log 2 Fold Change")+
+  xlab("log2 fold change")+
   ylab("-log10 Padj")+
   #scale_y_continuous(lmits = c(0,50))+
   theme(legend.position = "none",
